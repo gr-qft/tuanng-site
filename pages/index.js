@@ -1,65 +1,60 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from "@/styles/Home.module.css";
+import Image from "next/image";
+import { BiMenu } from "react-icons/bi";
+import { IconContext } from "react-icons";
+import Interests from "@/components/Interests";
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      <nav
+        style={{
+          position: "fixed",
+          width: "100%",
+          top: 0,
+          textAlign: "right",
+        }}
+      >
+        <IconContext.Provider
+          value={{
+            color: "#6495ED",
+            style: { verticalAlign: "middle" },
+            size: "2.5em",
+          }}
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+          <div>
+            <BiMenu />
+          </div>
+        </IconContext.Provider>
+      </nav>
+      <div className={styles.main}>
+        <div>
+          <Image
+            className={styles.image}
+            src="/img/me.png"
+            alt="Tuan Ng"
+            width={80}
+            height={80}
+          />
+        </div>
+        <div>
+          <h1> Tuan Nguyen </h1>
+          <p>
+            Hello, thank you for visiting my site. I'm a software developer
+            living Montréal, Québec, Canada. I love programming and in fact all
+            things related to computing (programming languages, databases,
+            operating systems etc.).
+          </p>
+          <p>
+            I am proficient with frontend and backend technologies: Javascript,
+            TypeScript, React, HTML, CSS, Yarn, Webpack, Storybook, GraphQL,
+            REST APIs, databases (SQL and NoSQL), Node.js, Next.js. I am also
+            experienced with mainstream programming languages: C, Python,
+            Scheme, Java etc.
+          </p>
+        </div>
+      </div>
+      <Interests />
     </div>
-  )
+  );
 }

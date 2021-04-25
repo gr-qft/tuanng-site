@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container > div {
+  width: 30%;
+  background-color: #797d7f;
+  margin: 0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
