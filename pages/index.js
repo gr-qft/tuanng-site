@@ -22,7 +22,7 @@ export default function Home() {
             <h1> Tuan Nguyen </h1>
             <p>
               Hello, thank you for visiting my site. I'm a software developer
-              living Montréal, Québec, Canada. I love programming and in fact
+              living in Montréal, Québec, Canada. I love programming and in fact
               all things related to computing (programming languages, databases,
               operating systems etc.).
             </p>
@@ -33,9 +33,11 @@ export default function Home() {
               Next.js. I am also experienced with mainstream programming
               languages: C, Python, Scheme, Java etc.
             </p>
+            <div style={{ marginTop: "1em" }}>
+              <Interests />
+            </div>
           </div>
         </div>
-        <Interests />
       </div>
     </div>
   );

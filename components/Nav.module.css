@@ -10,3 +10,29 @@
   text-align: right;
   padding: 0 0.5em 0 0;
 }
+
+.dropdown {
+  position: relative;
+  background-color: #ffbf00;
+  position: absolute;
+  top: 4em;
+  right: 0.5em;
+  height: 0;
+  width: 7em;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+}
+
+.dropdown > ul > li {
+  padding: 0.5em;
+  border-bottom: 1px solid #000;
+}
+
+.dropdown > ul > li + li {
+  margin-top: 1em;
+}
+
+.open {
+  height: auto;
+  height: 10em;
+}

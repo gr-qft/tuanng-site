@@ -80,6 +80,14 @@ th {
 
 @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 :root {
   font-size: 1rem;
   --nav-height: 4em;
