@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import styles from "@/components/Nav.module.css";
 import { BiMenu } from "react-icons/bi";
 import { IconContext } from "react-icons";
@@ -24,7 +25,7 @@ export default function Nav() {
         <IconContext.Provider
           value={{
             color: "#FFBF00",
-            style: { verticalAlign: "middle" },
+            style: { verticalAlign: "middle", cursor: "pointer" },
             size: "3em",
           }}
         >
@@ -38,13 +39,26 @@ export default function Nav() {
             visible ? `${styles.dropdown} ${styles.open}` : styles.dropdown
           }
         >
-          <ul>
-            <li> CV </li>
+          <ul onClick={toggleVisible}>
             <li>
-              <a href="https://github.com/gr-qft"> Github</a>
+              <Link href="/">
+                <a> Home </a>
+              </Link>
             </li>
             <li>
-              <a href="https://twitter.com/tuan_m_ng"> Twitter </a>
+              <Link href="/cv">
+                <a> CV </a>
+              </Link>
+            </li>
+            <li>
+              <a href="https://github.com/gr-qft" target="_blank">
+                Github
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/tuan_m_ng" target="_blank">
+                Twitter
+              </a>
             </li>
           </ul>
         </div>

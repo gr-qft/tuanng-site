@@ -1,0 +1,15 @@
+.wrapper {
+  width: var(--wrapper-width);
+  margin-top: var(--nav-height);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper > h1 {
+  font-size: 1.25em;
+  margin-bottom: 1em;
+}
+
+.wrapper > * + * {
+  margin-bottom: 0.5em;
+}

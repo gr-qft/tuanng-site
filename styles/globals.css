@@ -100,3 +100,8 @@ body {
   font-family: "Zen Dots", cursive;
   font-size: 0.9em;
 }
+
+.container {
+  max-width: 30em;
+  margin: var(--nav-height) auto;
+}
