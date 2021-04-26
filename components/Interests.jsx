@@ -37,7 +37,11 @@ export default function Interests() {
     <Flipper flipKey={items.join("")}>
       <div className={styles.container}>
         <IconContext.Provider
-          value={{ size: "2.5em", style: { verticalAlign: "middle" } }}
+          value={{
+            color: "#fff",
+            size: "2.5em",
+            style: { verticalAlign: "middle" },
+          }}
         >
           {items.map((item) => {
             return (

@@ -82,6 +82,8 @@ th {
 
 :root {
   font-size: 1rem;
+  --nav-height: 4em;
+  --wrapper-width: 97%;
 }
 
 body {

@@ -1,0 +1,12 @@
+.container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.container > div {
+  width: var(--wrapper-width);
+  margin: 0 auto;
+  text-align: right;
+  padding: 0 0.5em 0 0;
+}
