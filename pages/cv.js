@@ -5,6 +5,10 @@ export default function CV() {
     <div className={styles.wrapper}>
       <h1> Tuan Nguyen </h1>
       <p>
+        Experiences: Frontend Developer (Vanilla Forums), Fullstack Developer
+        (MaintainX).
+      </p>
+      <p>
         Technical skills: Javascript, TypeScript, React, Svelte, HTML, CSS,
         Yarn, Webpack, GraphQL, REST APIs, Node.js, databases (SQL and NoSQL),
         Next.js.
@@ -12,6 +16,7 @@ export default function CV() {
 
       <p> Mainstream programming languages: C, Python, Scheme, SML, Java. </p>
       <p> Other skills: Mathematics and Statistics.</p>
+
       <p>
         Education: Experimental Physics (Université de Montréal), Mathematics
         (Concordia University, University of Regina).
