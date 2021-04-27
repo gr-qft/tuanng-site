@@ -16,7 +16,6 @@
 
 .dropdown {
   position: relative;
-  background-color: #ffbf00;
   position: absolute;
   top: 4em;
   right: 0.5em;
@@ -29,10 +28,16 @@
 .dropdown > ul > li {
   padding: 0.5em;
   border-bottom: 1px solid #000;
+  background-color: #ffbf00;
+  transition: background-color 0.4s linear;
+}
+
+.dropdown > ul > li:hover {
+  background-color: #ff7f50;
 }
 
 .dropdown > ul > li + li {
-  margin-top: 1em;
+  margin-top: 0.1em;
 }
 
 .open {
