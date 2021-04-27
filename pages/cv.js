@@ -4,6 +4,9 @@ export default function CV() {
   return (
     <div className={styles.wrapper}>
       <h1> Tuan Nguyen </h1>
+
+      <h3> Software Engineer </h3>
+
       <p>
         Experiences: Frontend Developer (Vanilla Forums), Fullstack Developer
         (MaintainX).
