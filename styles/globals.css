@@ -91,17 +91,32 @@ a:active {
 :root {
   font-size: 1rem;
   --nav-height: 4em;
-  --wrapper-width: 97%;
+  --page-width: 97%;
+  --narrow-width: 30em;
+  --big-width: 38em;
 }
 
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   font-family: "Zen Dots", cursive;
   font-size: 0.9em;
 }
 
 .container {
-  max-width: 30em;
-  margin: var(--nav-height) auto;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.page {
+  margin: 0 auto;
+  width: var(--page-width);
+}
+
+.narrow {
+  max-width: var(--narrow-width);
+}
+
+.wide {
+  max-width: var(--big-width);
 }

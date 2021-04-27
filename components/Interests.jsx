@@ -38,7 +38,7 @@ export default function Interests() {
       <div className={styles.container}>
         <IconContext.Provider
           value={{
-            color: "#fff",
+            color: "#000",
             size: "2.5em",
             style: { verticalAlign: "middle" },
           }}

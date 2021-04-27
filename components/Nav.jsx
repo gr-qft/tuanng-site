@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import styles from "@/components/Nav.module.css";
 import { BiMenu } from "react-icons/bi";
@@ -9,6 +10,7 @@ export default function Nav() {
   const toggleVisible = () => setVisible((prevState) => !prevState);
   const dropdown = useRef(null);
   const [scrollHeight, setScrollHeight] = useState("0");
+  const router = useRouter();
 
   useEffect(() => {
     setScrollHeight(`${dropdown.current.scrollHeight}px`);
@@ -21,7 +23,9 @@ export default function Nav() {
 
   return (
     <nav className={styles.container}>
-      <div>
+      <div
+        className={`${router.asPath === "/blog" ? styles.wide : styles.narrow}`}
+      >
         <IconContext.Provider
           value={{
             color: "#FFBF00",
@@ -48,6 +52,11 @@ export default function Nav() {
             <li>
               <Link href="/cv">
                 <a> CV </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog">
+                <a> Blog </a>
               </Link>
             </li>
             <li>

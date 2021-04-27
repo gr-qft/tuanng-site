@@ -1,28 +1,27 @@
-.wrapper {
-  width: var(--wrapper-width);
+.page {
   margin: var(--nav-height) auto;
 }
 
-.main {
+.content {
   display: flex;
   margin: 0 0 1.5em 0;
 }
 
-.main > div:first-child {
+.content > div:first-child {
   margin: 0.25em 0 0 0;
 }
 
-.main h1 {
+.content h1 {
   font-size: 2em;
 }
 
-.main > div + div {
+.content > div + div {
   flex: 4;
   text-align: justify;
   margin: 0 1em;
 }
 
-.main p {
+.content p {
   margin: 1em 0 0 0;
 }
 

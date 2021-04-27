@@ -1,21 +1,26 @@
 .container {
   position: fixed;
   width: 100%;
-  max-width: 30em;
   top: 0;
-  display: flex;
-  align-items: space-between;
 }
 
 .container > div {
-  width: var(--wrapper-width);
+  position: relative;
   margin: 0 auto;
+  width: var(--wrapper-width);
   text-align: right;
   padding: 0 0.5em 0 0;
 }
 
+.narrow {
+  max-width: var(--narrow-width);
+}
+
+.wide {
+  max-width: var(--big-width);
+}
+
 .dropdown {
-  position: relative;
   position: absolute;
   top: 4em;
   right: 0.5em;
@@ -26,7 +31,6 @@
 }
 
 .dropdown > ul > li {
-  border-bottom: 1px solid #000;
   background-color: #ffbf00;
   transition: background-color 0.4s linear;
 }

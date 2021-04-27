@@ -1,20 +1,19 @@
-.wrapper {
-  width: var(--wrapper-width);
+.page {
   margin-top: var(--nav-height);
   margin-left: auto;
   margin-right: auto;
 }
 
-.wrapper > h1 {
+.page > h1 {
   font-size: 1.25em;
   margin-bottom: 0.25em;
 }
 
-.wrapper > h3 {
+.page > h3 {
   font-size: 1rem;
   margin-bottom: 1em;
 }
 
-.wrapper > * + * {
+.page > * + * {
   margin-bottom: 0.5em;
 }

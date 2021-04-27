@@ -4,8 +4,8 @@ import Interests from "@/components/Interests";
 
 export default function Home() {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.main}>
+    <div className={styles.page}>
+      <div className={styles.content}>
         <div>
           <Image
             className={styles.image}

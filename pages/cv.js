@@ -2,7 +2,7 @@ import styles from "@/styles/CV.module.css";
 
 export default function CV() {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.page}>
       <h1> Tuan Nguyen </h1>
 
       <h3> Software Engineer </h3>
