@@ -40,9 +40,9 @@ export default function CV() {
                 style: { verticalAlign: "middle" },
               }}
             >
-              <div>
+              <span>
                 <MdKeyboardBackspace />
-              </div>
+              </span>
             </IconContext.Provider>
           </a>
         </Link>
