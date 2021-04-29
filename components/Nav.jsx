@@ -8,17 +8,17 @@ import { IconContext } from "react-icons";
 export default function Nav() {
   const [visible, setVisible] = useState(false);
   const toggleVisible = () => setVisible((prevState) => !prevState);
-  const dropdown = useRef(null);
+  const dropdownRef = useRef(null);
   const menuRef = useRef(null);
   const [scrollHeight, setScrollHeight] = useState("0");
   const router = useRouter();
 
   useEffect(() => {
-    setScrollHeight(`${dropdown.current.scrollHeight}px`);
+    setScrollHeight(`${dropdownRef.current.scrollHeight}px`);
     if (visible) {
-      dropdown.current.style.setProperty("height", scrollHeight);
+      dropdownRef.current.style.setProperty("height", scrollHeight);
     } else {
-      dropdown.current.style.setProperty("height", "0");
+      dropdownRef.current.style.setProperty("height", "0");
     }
   }, [visible]);
 
@@ -51,7 +51,7 @@ export default function Nav() {
           </div>
         </IconContext.Provider>
         <div
-          ref={dropdown}
+          ref={dropdownRef}
           className={
             visible ? `${styles.dropdown} ${styles.open}` : styles.dropdown
           }
