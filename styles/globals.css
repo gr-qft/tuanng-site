@@ -79,6 +79,7 @@ th {
 /*! global styles */
 
 @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 a:link,
 a:visited,
@@ -89,7 +90,7 @@ a:active {
 }
 
 :root {
-  font-size: 1rem;
+  font-size: 1em;
   --nav-height: 4em;
   --page-width: 97%;
   --narrow-width: 30em;
