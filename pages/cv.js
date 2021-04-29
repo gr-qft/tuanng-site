@@ -1,4 +1,7 @@
+import Link from "next/link";
 import styles from "@/styles/CV.module.css";
+import { IconContext } from "react-icons";
+import { MdKeyboardBackspace } from "react-icons/md";
 
 export default function CV() {
   return (
@@ -26,6 +29,24 @@ export default function CV() {
       </p>
 
       <p> Interests: Programming, Reading, Writing. </p>
+
+      <p style={{ marginTop: "2em" }}>
+        <Link href="/">
+          <a style={{ color: "red" }}>
+            <IconContext.Provider
+              value={{
+                size: "2em",
+                color: "red",
+                style: { verticalAlign: "middle" },
+              }}
+            >
+              <div>
+                <MdKeyboardBackspace />
+              </div>
+            </IconContext.Provider>
+          </a>
+        </Link>
+      </p>
     </div>
   );
 }

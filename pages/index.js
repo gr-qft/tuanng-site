@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
 import Interests from "@/components/Interests";
@@ -29,6 +30,12 @@ export default function Home() {
             REST APIs, databases (SQL and NoSQL), Node.js, Next.js. I am also
             experienced with mainstream programming languages: C, Python,
             Scheme, Java etc.
+          </p>
+          <p>
+            Please see my
+            <Link href="/cv">
+              <a style={{ color: "red" }}> CV</a>
+            </Link>
           </p>
           <div style={{ marginTop: "1em" }}>
             <Interests />
