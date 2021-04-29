@@ -9,6 +9,7 @@ export default function Nav() {
   const [visible, setVisible] = useState(false);
   const toggleVisible = () => setVisible((prevState) => !prevState);
   const dropdown = useRef(null);
+  const menuRef = useRef(null);
   const [scrollHeight, setScrollHeight] = useState("0");
   const router = useRouter();
 
@@ -20,6 +21,18 @@ export default function Nav() {
       dropdown.current.style.setProperty("height", "0");
     }
   }, [visible]);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        toggleVisible();
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuRef]);
 
   return (
     <nav className={styles.container}>
@@ -33,7 +46,7 @@ export default function Nav() {
             size: "3em",
           }}
         >
-          <div onClick={toggleVisible}>
+          <div ref={menuRef} onClick={toggleVisible}>
             <BiMenu />
           </div>
         </IconContext.Provider>
@@ -43,7 +56,7 @@ export default function Nav() {
             visible ? `${styles.dropdown} ${styles.open}` : styles.dropdown
           }
         >
-          <ul onClick={toggleVisible}>
+          <ul>
             <li>
               <Link href="/">
                 <a> Home </a>
