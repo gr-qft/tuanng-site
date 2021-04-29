@@ -25,7 +25,7 @@ export default function Nav() {
   useEffect(() => {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
-        toggleVisible();
+        setVisible(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
